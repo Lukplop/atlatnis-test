@@ -1,6 +1,9 @@
 version: 3
+automerge: true
 projects:
-- name: project
+- name: project-main
   dir: .
+  depends_on:
+    - project-module
 - name: project-module
   dir: ./module
