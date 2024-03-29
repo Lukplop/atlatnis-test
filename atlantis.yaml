@@ -3,4 +3,4 @@ projects:
 - name: project
   dir: .
 - name: project-module
-  dir: module
+  dir: ./module
