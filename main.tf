@@ -26,7 +26,7 @@ resource "aws_security_group" "allow_ssh" {
 
 resource "aws_key_pair" "deployer" {
   key_name   = "deployer_key"
-  public_key = file("~/.ssh/id_rsa.pub")
+  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDBGDYomP9z6kRjxkvYKU45aEYocCVoauewnP4uYJEwqA2qhUwxZCopKcouB5wxlrNzva+lOwRMq22hE0mWaY+Cnb+LwmO91gWiK6tSBS5x5gt7ZqDAZ7BK6JOHGl5869JtPMKvoHVhFJ9uYkjZ6QKAsK4RESCASnYTn8msFICecFy3Yo84TRRjsQ5OiEWWPkLtUTGLHbbh3k1e3jjZH4SQI6/qiH1+7ZR0EQ7O2Y2rzLytLfNKH97Xo53/U1wNMP6llo8glydBVKBK0Zwz8B8tfJd1A4Oo0Luog3OcfJpTmMF2DNFbvyAFl19lCtLccAjkC6etI+224hFy2uG1RGenYvUiMRpor8HMqsFm563b/xl/QziDePhlam+L/iZAend+oIyQ0Ah2ve0H+El9RJefSFFePakxZ/bw+mNiaRD3m/0HZ78jywd1C3X+gEkgjd9VER5MQzFEdreXkcwi/pYLrreY4wtA0xnvHVGaZHCiuOJvDn9OloA3VhQKQDmc/jzaUlO1A4JN843TYbWtEeBLqJFcHfDAgVJlBAWel0oUk/L9Oh2ve6+g4e4HkOEH/X0vbMI6/tImiAYo69lZfNQm3rydLpsNYI2argE1Y42RTpkZIGC+VQYVn6TUcblK8hLv+jHkEPH/XKKSRJOAP+p6UnvudANxV90xZA5auVc3kQ== lukasz@mbp-lukasz.home"
 }
 
 data "aws_ami" "ubuntu" {
