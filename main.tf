@@ -1,6 +1,6 @@
 
 provider "aws" {
-  region = "eu-central-1"
+  region = "us-west-2"
 }
 
 resource "aws_vpc" "main" {
