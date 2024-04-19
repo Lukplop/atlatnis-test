@@ -15,6 +15,7 @@ resource "aws_subnet" "main" {
 resource "aws_security_group" "allow_ssh" {
   name        = "allow_ssh"
   description = "Allow SSH inbound traffic"
+  vpc_id     = aws_vpc.main.id
 
   ingress {
     from_port   = 22
@@ -94,12 +95,12 @@ resource "aws_iam_role_policy" "example" {
 EOF
 }
 
-resource "aws_s3_bucket" "bucket_test" {
-  bucket = "bucket-test"
+resource "aws_s3_bucket" "buckettest" {
+  bucket = "buckettestluk88"
   acl    = "private"
 
   tags = {
-    Name        = "My bucket"
+    Name        = "My-bucket"
     Environment = "Dev"
   }
 }
